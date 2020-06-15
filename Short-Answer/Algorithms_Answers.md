@@ -2,13 +2,33 @@
 
 ## Exercise I
 
-a)
 
+```python
+a)  a = 0
+    while (a < n * n * n):
+      a = a + n * n
+```
+I think this is O(n^3) as it grows exponentionally as per line 8
 
-b)
+```
+b)  sum = 0
+    for i in range(n):     On
+      j = 1
+      while j < n:    1/2N ? 
+        j *= 2
+        sum += 1
+```
 
+This seems like O(n) as this is the larger code in line 15.  I'm thinking the while loop wouldn't affect it. 
 
-c)
+```
+c)  def bunnyEars(bunnies):
+      if bunnies == 0:
+        return 0
+
+      return 2 + bunnyEars(bunnies-1)   On? or O(1)?
+```
+This is probably O(1) as the return are constant values . 
 
 ## Exercise II
 
