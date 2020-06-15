@@ -14,6 +14,9 @@ class SortingRobot:
         Returns True if the robot can move right or False if it's
         at the end of the list.
         """
+        # if self == len(l) -1:
+        #     return False 
+
         return self._position < len(self._list) - 1
 
     def can_move_left(self):
@@ -21,6 +24,9 @@ class SortingRobot:
         Returns True if the robot can move left or False if it's
         at the start of the list.
         """
+        # if self == l[0]:
+        #     return False 
+
         return self._position > 0
 
     def move_right(self):
@@ -97,8 +103,53 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        # light on to start
+       
+        # self.set_light_on()
+         
+        # if self.can_move_right() is False: 
+        #     return self._list 
 
+        # self.swap_item()
+        
+        # while self.can_move_right() is True :
+        #     self.move_right()
+           
+
+        #         # swap if needed 
+        #     if self.compare_item() == 1:
+        #         self.swap_item()
+
+        # while self.can_move_left() is True:
+        #     self.move_left() 
+
+        #     if self.compare_item() == None: 
+        #         self.swap_item()
+        #         self.set_light_off()
+        #         break 
+                
+        # self.move_right()
+        # self.sort()
+
+        
+        self.set_light_on()
+        while self.light_is_on():
+            self.set_light_off()
+            while self.can_move_right():
+                self.move_right()
+                if self.compare_item() == 1:
+                    self.swap_item()
+                    self.set_light_on()
+
+            while self.can_move_left():
+                self.swap_item()
+                self.move_left()
+                if self.compare_item() == -1:
+                    self.swap_item()
+                    self.set_light_on()
+                self.move_right()
+                self.swap_item()
+                self.move_left()
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
