@@ -147,7 +147,7 @@ class SortingRobot:
                 if self.compare_item() == -1:
                     self.swap_item()
                     self.set_light_on()
-                self.move_right()
+                self.move_right()  ##is this a last check? 
                 self.swap_item()
                 self.move_left()
 

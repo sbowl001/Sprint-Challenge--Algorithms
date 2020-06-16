@@ -8,7 +8,7 @@ a)  a = 0
     while (a < n * n * n):
       a = a + n * n
 ```
-I think this is O(n^3) as it grows exponentionally as per line 8
+I think this is O(n) as it grows exponentionally as per line 8  / line 9
 
 ```
 b)  sum = 0
@@ -19,16 +19,18 @@ b)  sum = 0
         sum += 1
 ```
 
-This seems like O(n) as this is the larger code in line 15.  I'm thinking the while loop wouldn't affect it. 
+This seems like O(nlogn) as this is the larger code in line 15.  I'm thinking the while loop wouldn't affect it. 
 
+
+O(nlogn)
 ```
 c)  def bunnyEars(bunnies):
       if bunnies == 0:
         return 0
 
-      return 2 + bunnyEars(bunnies-1)   On? or O(1)?
+      return 2 + bunnyEars(bunnies-1)   On? 
 ```
-This is probably O(1) as the return are constant values . 
+This is probably O(n). 
 
 ## Exercise II
 
